@@ -21,6 +21,7 @@
 		5BAD31D61927C6F900438DA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAD31B81927C6F900438DA2 /* UIKit.framework */; };
 		5BAD31DE1927C6F900438DA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD31DC1927C6F900438DA2 /* InfoPlist.strings */; };
 		5BAD31E01927C6F900438DA2 /* MWButtonGroup_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD31DF1927C6F900438DA2 /* MWButtonGroup_ExampleTests.m */; };
+		5BAD31EB1927C85800438DA2 /* MWButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD31EA1927C85800438DA2 /* MWButtonGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		5BAD31DB1927C6F900438DA2 /* MWButtonGroup-ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MWButtonGroup-ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		5BAD31DD1927C6F900438DA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5BAD31DF1927C6F900438DA2 /* MWButtonGroup_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWButtonGroup_ExampleTests.m; sourceTree = "<group>"; };
+		5BAD31E91927C85800438DA2 /* MWButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MWButtonGroup.h; path = Classes/MWButtonGroup.h; sourceTree = "<group>"; };
+		5BAD31EA1927C85800438DA2 /* MWButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MWButtonGroup.m; path = Classes/MWButtonGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 		5BAD31A81927C6F900438DA2 = {
 			isa = PBXGroup;
 			children = (
+				5BAD31EC1927C86500438DA2 /* Classes */,
 				5BAD31BA1927C6F900438DA2 /* MWButtonGroup-Example */,
 				5BAD31D91927C6F900438DA2 /* MWButtonGroup-ExampleTests */,
 				5BAD31B31927C6F900438DA2 /* Frameworks */,
@@ -114,7 +118,6 @@
 			children = (
 				5BAD31C31927C6F900438DA2 /* MWAppDelegate.h */,
 				5BAD31C41927C6F900438DA2 /* MWAppDelegate.m */,
-				5BAD31C61927C6F900438DA2 /* Main.storyboard */,
 				5BAD31C91927C6F900438DA2 /* MWViewController.h */,
 				5BAD31CA1927C6F900438DA2 /* MWViewController.m */,
 				5BAD31CC1927C6F900438DA2 /* Images.xcassets */,
@@ -126,6 +129,7 @@
 		5BAD31BB1927C6F900438DA2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5BAD31C61927C6F900438DA2 /* Main.storyboard */,
 				5BAD31BC1927C6F900438DA2 /* MWButtonGroup-Example-Info.plist */,
 				5BAD31BD1927C6F900438DA2 /* InfoPlist.strings */,
 				5BAD31C01927C6F900438DA2 /* main.m */,
@@ -150,6 +154,15 @@
 				5BAD31DC1927C6F900438DA2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BAD31EC1927C86500438DA2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD31E91927C85800438DA2 /* MWButtonGroup.h */,
+				5BAD31EA1927C85800438DA2 /* MWButtonGroup.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +266,7 @@
 				5BAD31C51927C6F900438DA2 /* MWAppDelegate.m in Sources */,
 				5BAD31CB1927C6F900438DA2 /* MWViewController.m in Sources */,
 				5BAD31C11927C6F900438DA2 /* main.m in Sources */,
+				5BAD31EB1927C85800438DA2 /* MWButtonGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

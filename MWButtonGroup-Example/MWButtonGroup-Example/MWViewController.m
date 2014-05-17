@@ -7,8 +7,11 @@
 //
 
 #import "MWViewController.h"
+#import "MWButtonGroup.h"
 
 @interface MWViewController ()
+
+@property (weak, nonatomic) IBOutlet MWButtonGroup *buttonGroup;
 
 @end
 
