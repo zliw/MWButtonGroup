@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+/** a UIView subclass containing an array of buttons
+ */
 @interface MWButtonGroup : UIView
+
+@property (strong, nonatomic,readonly) NSArray *buttons;
+
+/** method for replacing the current buttons by giving a list of titles. buttons are text only in this case
+ @param titles  an NSArray of strings
+ */
+- (void)addButtonsForTitles:(NSArray *)titles;
+
 
 @end

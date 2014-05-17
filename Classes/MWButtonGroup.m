@@ -14,18 +14,43 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self _setup];
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    // Drawing code
+    self = [super initWithCoder:aDecoder];
+
+    if (self) {
+        [self _setup];
+    }
+    return self;
 }
-*/
+
+- (void)_setup
+{
+    _buttons = @[];
+
+    self.layer.cornerRadius = 8;
+    self.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.layer.borderWidth = 1;
+}
+
+- (void)addButtonsForTitles:(NSArray *)titles
+{
+    NSMutableArray *buttons = [NSMutableArray new];
+
+    for (NSString *title in titles) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [button setTitle:title forState:UIControlStateNormal];
+        [buttons addObject:button];
+        [self addSubview:button];
+    }
+
+    _buttons = [NSArray arrayWithArray:buttons];
+}
 
 @end
