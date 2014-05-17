@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BAD31B51927C6F900438DA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAD31B41927C6F900438DA2 /* Foundation.framework */; };
+		5BAD31B71927C6F900438DA2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAD31B61927C6F900438DA2 /* CoreGraphics.framework */; };
+		5BAD31B91927C6F900438DA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAD31B81927C6F900438DA2 /* UIKit.framework */; };
+		5BAD31BF1927C6F900438DA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD31BD1927C6F900438DA2 /* InfoPlist.strings */; };
+		5BAD31C11927C6F900438DA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD31C01927C6F900438DA2 /* main.m */; };
+		5BAD31C51927C6F900438DA2 /* MWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD31C41927C6F900438DA2 /* MWAppDelegate.m */; };
+		5BAD31C81927C6F900438DA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD31C61927C6F900438DA2 /* Main.storyboard */; };
+		5BAD31CB1927C6F900438DA2 /* MWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD31CA1927C6F900438DA2 /* MWViewController.m */; };
+		5BAD31CD1927C6F900438DA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD31CC1927C6F900438DA2 /* Images.xcassets */; };
+		5BAD31D41927C6F900438DA2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAD31D31927C6F900438DA2 /* XCTest.framework */; };
+		5BAD31D51927C6F900438DA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAD31B41927C6F900438DA2 /* Foundation.framework */; };
+		5BAD31D61927C6F900438DA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAD31B81927C6F900438DA2 /* UIKit.framework */; };
+		5BAD31DE1927C6F900438DA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BAD31DC1927C6F900438DA2 /* InfoPlist.strings */; };
+		5BAD31E01927C6F900438DA2 /* MWButtonGroup_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD31DF1927C6F900438DA2 /* MWButtonGroup_ExampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BAD31D71927C6F900438DA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BAD31A91927C6F900438DA2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BAD31B01927C6F900438DA2;
+			remoteInfo = "MWButtonGroup-Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5BAD31B11927C6F900438DA2 /* MWButtonGroup-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MWButtonGroup-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAD31B41927C6F900438DA2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BAD31B61927C6F900438DA2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5BAD31B81927C6F900438DA2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5BAD31BC1927C6F900438DA2 /* MWButtonGroup-Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MWButtonGroup-Example-Info.plist"; sourceTree = "<group>"; };
+		5BAD31BE1927C6F900438DA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BAD31C01927C6F900438DA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5BAD31C21927C6F900438DA2 /* MWButtonGroup-Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MWButtonGroup-Example-Prefix.pch"; sourceTree = "<group>"; };
+		5BAD31C31927C6F900438DA2 /* MWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWAppDelegate.h; sourceTree = "<group>"; };
+		5BAD31C41927C6F900438DA2 /* MWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWAppDelegate.m; sourceTree = "<group>"; };
+		5BAD31C71927C6F900438DA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BAD31C91927C6F900438DA2 /* MWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MWViewController.h; sourceTree = "<group>"; };
+		5BAD31CA1927C6F900438DA2 /* MWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWViewController.m; sourceTree = "<group>"; };
+		5BAD31CC1927C6F900438DA2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5BAD31D21927C6F900438DA2 /* MWButtonGroup-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MWButtonGroup-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAD31D31927C6F900438DA2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5BAD31DB1927C6F900438DA2 /* MWButtonGroup-ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MWButtonGroup-ExampleTests-Info.plist"; sourceTree = "<group>"; };
+		5BAD31DD1927C6F900438DA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BAD31DF1927C6F900438DA2 /* MWButtonGroup_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MWButtonGroup_ExampleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BAD31AE1927C6F900438DA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAD31B71927C6F900438DA2 /* CoreGraphics.framework in Frameworks */,
+				5BAD31B91927C6F900438DA2 /* UIKit.framework in Frameworks */,
+				5BAD31B51927C6F900438DA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAD31CF1927C6F900438DA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAD31D41927C6F900438DA2 /* XCTest.framework in Frameworks */,
+				5BAD31D61927C6F900438DA2 /* UIKit.framework in Frameworks */,
+				5BAD31D51927C6F900438DA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BAD31A81927C6F900438DA2 = {
+			isa = PBXGroup;
+			children = (
+				5BAD31BA1927C6F900438DA2 /* MWButtonGroup-Example */,
+				5BAD31D91927C6F900438DA2 /* MWButtonGroup-ExampleTests */,
+				5BAD31B31927C6F900438DA2 /* Frameworks */,
+				5BAD31B21927C6F900438DA2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BAD31B21927C6F900438DA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD31B11927C6F900438DA2 /* MWButtonGroup-Example.app */,
+				5BAD31D21927C6F900438DA2 /* MWButtonGroup-ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BAD31B31927C6F900438DA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD31B41927C6F900438DA2 /* Foundation.framework */,
+				5BAD31B61927C6F900438DA2 /* CoreGraphics.framework */,
+				5BAD31B81927C6F900438DA2 /* UIKit.framework */,
+				5BAD31D31927C6F900438DA2 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BAD31BA1927C6F900438DA2 /* MWButtonGroup-Example */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD31C31927C6F900438DA2 /* MWAppDelegate.h */,
+				5BAD31C41927C6F900438DA2 /* MWAppDelegate.m */,
+				5BAD31C61927C6F900438DA2 /* Main.storyboard */,
+				5BAD31C91927C6F900438DA2 /* MWViewController.h */,
+				5BAD31CA1927C6F900438DA2 /* MWViewController.m */,
+				5BAD31CC1927C6F900438DA2 /* Images.xcassets */,
+				5BAD31BB1927C6F900438DA2 /* Supporting Files */,
+			);
+			path = "MWButtonGroup-Example";
+			sourceTree = "<group>";
+		};
+		5BAD31BB1927C6F900438DA2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD31BC1927C6F900438DA2 /* MWButtonGroup-Example-Info.plist */,
+				5BAD31BD1927C6F900438DA2 /* InfoPlist.strings */,
+				5BAD31C01927C6F900438DA2 /* main.m */,
+				5BAD31C21927C6F900438DA2 /* MWButtonGroup-Example-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BAD31D91927C6F900438DA2 /* MWButtonGroup-ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD31DF1927C6F900438DA2 /* MWButtonGroup_ExampleTests.m */,
+				5BAD31DA1927C6F900438DA2 /* Supporting Files */,
+			);
+			path = "MWButtonGroup-ExampleTests";
+			sourceTree = "<group>";
+		};
+		5BAD31DA1927C6F900438DA2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD31DB1927C6F900438DA2 /* MWButtonGroup-ExampleTests-Info.plist */,
+				5BAD31DC1927C6F900438DA2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BAD31B01927C6F900438DA2 /* MWButtonGroup-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BAD31E31927C6F900438DA2 /* Build configuration list for PBXNativeTarget "MWButtonGroup-Example" */;
+			buildPhases = (
+				5BAD31AD1927C6F900438DA2 /* Sources */,
+				5BAD31AE1927C6F900438DA2 /* Frameworks */,
+				5BAD31AF1927C6F900438DA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MWButtonGroup-Example";
+			productName = "MWButtonGroup-Example";
+			productReference = 5BAD31B11927C6F900438DA2 /* MWButtonGroup-Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BAD31D11927C6F900438DA2 /* MWButtonGroup-ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BAD31E61927C6F900438DA2 /* Build configuration list for PBXNativeTarget "MWButtonGroup-ExampleTests" */;
+			buildPhases = (
+				5BAD31CE1927C6F900438DA2 /* Sources */,
+				5BAD31CF1927C6F900438DA2 /* Frameworks */,
+				5BAD31D01927C6F900438DA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BAD31D81927C6F900438DA2 /* PBXTargetDependency */,
+			);
+			name = "MWButtonGroup-ExampleTests";
+			productName = "MWButtonGroup-ExampleTests";
+			productReference = 5BAD31D21927C6F900438DA2 /* MWButtonGroup-ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BAD31A91927C6F900438DA2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MW;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Martin Wilz";
+				TargetAttributes = {
+					5BAD31D11927C6F900438DA2 = {
+						TestTargetID = 5BAD31B01927C6F900438DA2;
+					};
+				};
+			};
+			buildConfigurationList = 5BAD31AC1927C6F900438DA2 /* Build configuration list for PBXProject "MWButtonGroup-Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BAD31A81927C6F900438DA2;
+			productRefGroup = 5BAD31B21927C6F900438DA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BAD31B01927C6F900438DA2 /* MWButtonGroup-Example */,
+				5BAD31D11927C6F900438DA2 /* MWButtonGroup-ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BAD31AF1927C6F900438DA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAD31CD1927C6F900438DA2 /* Images.xcassets in Resources */,
+				5BAD31BF1927C6F900438DA2 /* InfoPlist.strings in Resources */,
+				5BAD31C81927C6F900438DA2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAD31D01927C6F900438DA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAD31DE1927C6F900438DA2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BAD31AD1927C6F900438DA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAD31C51927C6F900438DA2 /* MWAppDelegate.m in Sources */,
+				5BAD31CB1927C6F900438DA2 /* MWViewController.m in Sources */,
+				5BAD31C11927C6F900438DA2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAD31CE1927C6F900438DA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAD31E01927C6F900438DA2 /* MWButtonGroup_ExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BAD31D81927C6F900438DA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BAD31B01927C6F900438DA2 /* MWButtonGroup-Example */;
+			targetProxy = 5BAD31D71927C6F900438DA2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BAD31BD1927C6F900438DA2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BAD31BE1927C6F900438DA2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5BAD31C61927C6F900438DA2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BAD31C71927C6F900438DA2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BAD31DC1927C6F900438DA2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BAD31DD1927C6F900438DA2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BAD31E11927C6F900438DA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5BAD31E21927C6F900438DA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BAD31E41927C6F900438DA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MWButtonGroup-Example/MWButtonGroup-Example-Prefix.pch";
+				INFOPLIST_FILE = "MWButtonGroup-Example/MWButtonGroup-Example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5BAD31E51927C6F900438DA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MWButtonGroup-Example/MWButtonGroup-Example-Prefix.pch";
+				INFOPLIST_FILE = "MWButtonGroup-Example/MWButtonGroup-Example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5BAD31E71927C6F900438DA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MWButtonGroup-Example.app/MWButtonGroup-Example";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MWButtonGroup-Example/MWButtonGroup-Example-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MWButtonGroup-ExampleTests/MWButtonGroup-ExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5BAD31E81927C6F900438DA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MWButtonGroup-Example.app/MWButtonGroup-Example";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MWButtonGroup-Example/MWButtonGroup-Example-Prefix.pch";
+				INFOPLIST_FILE = "MWButtonGroup-ExampleTests/MWButtonGroup-ExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BAD31AC1927C6F900438DA2 /* Build configuration list for PBXProject "MWButtonGroup-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAD31E11927C6F900438DA2 /* Debug */,
+				5BAD31E21927C6F900438DA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BAD31E31927C6F900438DA2 /* Build configuration list for PBXNativeTarget "MWButtonGroup-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAD31E41927C6F900438DA2 /* Debug */,
+				5BAD31E51927C6F900438DA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BAD31E61927C6F900438DA2 /* Build configuration list for PBXNativeTarget "MWButtonGroup-ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAD31E71927C6F900438DA2 /* Debug */,
+				5BAD31E81927C6F900438DA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BAD31A91927C6F900438DA2 /* Project object */;
+}
