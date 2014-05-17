@@ -22,6 +22,7 @@
     [super viewDidLoad];
 
     [self.buttonGroup addButtonsForTitles:@[@"Yes", @"No", @"Maybe"]];
+    [self.buttonGroup selectButtonAtIndex:0];
 }
 
 - (void)didReceiveMemoryWarning

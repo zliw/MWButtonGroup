@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 /** a UIView subclass containing an array of buttons
  */
 @interface MWButtonGroup : UIView
@@ -24,5 +25,15 @@
  @param titles  an NSArray of strings
  */
 - (void)addButtonsForTitles:(NSArray *)titles;
+
+/** selects a button at the given. triggers redraw
+    @param index the index of the button to select
+ */
+- (void)selectButtonAtIndex:(NSUInteger)index;
+
+/** deselects a button at the given. triggers redraw
+ @param index the index of the button to deselect
+ */
+- (void)deselectButtonAtIndex:(NSUInteger)index;
 
 @end

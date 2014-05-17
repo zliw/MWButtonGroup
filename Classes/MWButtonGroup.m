@@ -6,13 +6,16 @@
 //  Copyright (c) 2014 Martin Wilz. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "MWButtonGroup.h"
 
 @interface MWButtonGroup()
 
 // views used for separator lines, these are all one pixel wide
 @property (strong, nonatomic) NSArray *lineViews;
+
+// set of indexes for the selected buttons. for internal use only
+@property (strong, nonatomic) NSMutableIndexSet *selectedIndexSet;
+
 
 @end
 
@@ -53,6 +56,7 @@
     self.layer.borderWidth = 1;
 
     self.textColor = [UIColor whiteColor];
+    _selectedIndexSet = [NSMutableIndexSet new];
 }
 
 
@@ -74,6 +78,7 @@
         [self addSubview:lineView];
     }
 
+    _selectedIndexSet = [NSMutableIndexSet new];
     _lineViews = [NSArray arrayWithArray:lineViews];
     _buttons = [NSArray arrayWithArray:buttons];
 }
@@ -105,5 +110,39 @@
         x += buttonFrame.size.width + 1;
     }
 }
+
+- (void)selectButtonAtIndex:(NSUInteger)index
+{
+    if (index > _buttons.count) return;
+
+    if (!self.multiSelectAllowed) {
+        [_selectedIndexSet removeAllIndexes];
+
+        for (UIButton *button in _buttons) {
+            button.backgroundColor = [UIColor blackColor];
+            [button setTitleColor:self.textColor forState:UIControlStateNormal];
+        }
+    }
+
+    [_selectedIndexSet addIndex:index];
+
+    UIButton *button = _buttons[index];
+    button.backgroundColor = [UIColor whiteColor];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
+
+- (void)deselectButtonAtIndex:(NSUInteger)index
+{
+    if (index > self.buttons.count) return;
+
+    [_selectedIndexSet removeIndex:index];
+    [self setNeedsLayout];
+
+    UIButton *button = _buttons[index];
+    button.backgroundColor = [UIColor blackColor];
+    [button setTitleColor:self.textColor forState:UIControlStateNormal];
+}
+
+
 
 @end
