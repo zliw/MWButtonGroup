@@ -87,18 +87,64 @@
 }
 
 
+// internal method used, when deselection occurs triggered by user interaction
+- (void)_notifyDeselection:(NSIndexSet *)indexSet
+{
+    if (self.delegate) {
+
+        [indexSet enumerateIndexesUsingBlock:^(NSUInteger index, BOOL *stop) {
+
+            if ([self.delegate respondsToSelector:@selector(buttonGroup:didDeselectButtonAtIndex:)]) {
+                [self.delegate buttonGroup:self didDeselectButtonAtIndex:index];
+            }
+            if ([self.delegate respondsToSelector:@selector(buttonGroup:didDeselectButton:)]) {
+                [self.delegate buttonGroup:self didDeselectButton:_buttons[index]];
+            }
+        }];
+    }
+}
+
+
+// internal method used, when selection occurs triggered by user interaction
+- (void)_notifySelection:(NSUInteger)index
+{
+    if (self.delegate) {
+        if ([self.delegate respondsToSelector:@selector(buttonGroup:didSelectButtonAtIndex:)]) {
+            [self.delegate buttonGroup:self didSelectButtonAtIndex:index];
+        }
+        if ([self.delegate respondsToSelector:@selector(buttonGroup:didSelectButton:)]) {
+            [self.delegate buttonGroup:self didSelectButton:_buttons[index]];
+        }
+    }
+}
+
+
 - (IBAction)buttonPressed:(id)sender
 {
     NSInteger index = [_buttons indexOfObject:sender];
 
     if (index != NSNotFound) {
         if (self.multiSelectAllowed) {
-            [self selectButtonAtIndex:index];
+
+            if (![_selectedIndexSet containsIndex:index]) {
+                [self selectButtonAtIndex:index];
+                [self _notifySelection:index];
+            }
+            else {
+                [self deselectButtonAtIndex:index];
+                [self _notifyDeselection:[NSIndexSet indexSetWithIndex:index]];
+            }
+
             return;
         }
 
         if (![_selectedIndexSet containsIndex:index]) {
+            NSMutableIndexSet *copy =  [self.selectedIndexSet mutableCopy];
+            [copy removeIndex:index];
+
             [self selectButtonAtIndex:index];
+            [self _notifyDeselection:copy];
+            [self _notifySelection:index];
         }
     }
 }

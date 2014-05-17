@@ -7,7 +7,6 @@
 //
 
 #import "MWViewController.h"
-#import "MWButtonGroup.h"
 
 @interface MWViewController ()
 
@@ -23,12 +22,33 @@
 
     [self.buttonGroup addButtonsForTitles:@[@"Yes", @"No", @"Maybe"]];
     [self.buttonGroup selectButtonAtIndex:0];
+
+    //self.buttonGroup.multiSelectAllowed = YES;
+
+    self.buttonGroup.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)buttonGroup:(MWButtonGroup *)buttonGroup didSelectButtonAtIndex:(NSUInteger)index
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"selected button at index %d", index);
 }
+
+- (void)buttonGroup:(MWButtonGroup *)buttonGroup didDeselectButtonAtIndex:(NSUInteger)index
+{
+    NSLog(@"deselected button at index %d", index);
+
+}
+
+- (void)buttonGroup:(MWButtonGroup *)buttonGroup didSelectButton:(UIButton *)button
+{
+    NSLog(@"selected button with title '%@'", button.titleLabel.text);
+
+}
+
+- (void)buttonGroup:(MWButtonGroup *)buttonGroup didDeselectButton:(UIButton *)button
+{
+    NSLog(@"deselected button with title '%@'", button.titleLabel.text);
+}
+
 
 @end

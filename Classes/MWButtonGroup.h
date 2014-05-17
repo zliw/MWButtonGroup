@@ -8,9 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
+@class MWButtonGroup;
+
+@protocol MWButtonGroupDelegate
+
+@optional
+
+- (void)buttonGroup:(MWButtonGroup *)buttonGroup didSelectButtonAtIndex:(NSUInteger)index;
+- (void)buttonGroup:(MWButtonGroup *)buttonGroup didDeselectButtonAtIndex:(NSUInteger)index;
+
+- (void)buttonGroup:(MWButtonGroup *)buttonGroup didSelectButton:(UIButton *)button;
+- (void)buttonGroup:(MWButtonGroup *)buttonGroup didDeselectButton:(UIButton *)button;
+
+@end
+
+
+
 /** a UIView subclass containing an array of buttons
  */
 @interface MWButtonGroup : UIView
+
+/** a delegate which is notified via the protocols methods, if the user has selected a button */
+@property (weak, nonatomic)  NSObject<MWButtonGroupDelegate> *delegate;
 
 /** readonly property for accessing the array of buttons */
 @property (strong, nonatomic,readonly)  NSArray *buttons;
@@ -26,12 +45,12 @@
  */
 - (void)addButtonsForTitles:(NSArray *)titles;
 
-/** selects a button at the given. triggers redraw
+/** selects a button at the given. triggers redraw of the buttons
     @param index the index of the button to select
  */
 - (void)selectButtonAtIndex:(NSUInteger)index;
 
-/** deselects a button at the given. triggers redraw
+/** deselects a button at the given. triggers redraw the buttons
  @param index the index of the button to deselect
  */
 - (void)deselectButtonAtIndex:(NSUInteger)index;

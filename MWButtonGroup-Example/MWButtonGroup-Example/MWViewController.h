@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWButtonGroup.h"
 
-@interface MWViewController : UIViewController
+@interface MWViewController : UIViewController<MWButtonGroupDelegate>
 
 @end
