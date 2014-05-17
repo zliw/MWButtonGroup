@@ -11,7 +11,8 @@
  */
 @interface MWButtonGroup : UIView
 
-@property (strong, nonatomic,readonly) NSArray *buttons;
+@property (strong, nonatomic,readonly)  NSArray *buttons;
+@property (strong, nonatomic)           UIColor *textColor;
 
 /** method for replacing the current buttons by giving a list of titles. buttons are text only in this case
  @param titles  an NSArray of strings
