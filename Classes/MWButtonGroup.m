@@ -69,6 +69,9 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [button setTitle:title forState:UIControlStateNormal];
         [button setTitleColor:self.textColor forState:UIControlStateNormal];
+        [button addTarget:self
+                   action:@selector(buttonPressed:)
+         forControlEvents:UIControlEventTouchUpInside];
         [buttons addObject:button];
         [self addSubview:button];
 
@@ -84,12 +87,29 @@
 }
 
 
+- (IBAction)buttonPressed:(id)sender
+{
+    NSInteger index = [_buttons indexOfObject:sender];
+
+    if (index != NSNotFound) {
+        if (self.multiSelectAllowed) {
+            [self selectButtonAtIndex:index];
+            return;
+        }
+
+        if (![_selectedIndexSet containsIndex:index]) {
+            [self selectButtonAtIndex:index];
+        }
+    }
+}
+
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
 
     CGRect buttonFrame = self.bounds;
-    buttonFrame.size.width = ((self.frame.size.width - 1) / self.buttons.count) - self.buttons.count;
+    buttonFrame.size.width = ((self.frame.size.width - 1) / self.buttons.count) - 1;
 
     CGRect lineFrame = self.bounds;
     lineFrame.size.width = 1;
@@ -111,6 +131,7 @@
     }
 }
 
+
 - (void)selectButtonAtIndex:(NSUInteger)index
 {
     if (index > _buttons.count) return;
@@ -131,6 +152,7 @@
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 }
 
+
 - (void)deselectButtonAtIndex:(NSUInteger)index
 {
     if (index > self.buttons.count) return;
@@ -142,7 +164,5 @@
     button.backgroundColor = [UIColor blackColor];
     [button setTitleColor:self.textColor forState:UIControlStateNormal];
 }
-
-
 
 @end
