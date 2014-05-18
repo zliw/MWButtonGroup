@@ -34,8 +34,11 @@
 /** readonly property for accessing the array of buttons */
 @property (strong, nonatomic,readonly)  NSArray *buttons;
 
-/** textColor of the button labels. TODO: custom setter to update buttons already created*/
+/** textColor of the button labels. */
 @property (strong, nonatomic)           UIColor *textColor;
+
+/** background color of the button labels. */
+@property (strong, nonatomic)           UIColor *buttonBackgroundColor;
 
 /** property for determining the selection pattern */
 @property (assign)                      BOOL    multiSelectAllowed;

@@ -23,16 +23,28 @@
                                     <constraint firstAttribute="height" constant="40" id="PMU-nU-4sk"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-NP-r5m" userLabel="Colored Button Group" customClass="MWButtonGroup">
+                                <rect key="frame" x="0.0" y="327" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="gst-My-cQ3"/>
+                                    <constraint firstAttribute="height" constant="40" id="sAN-yT-iX8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a9d-NP-r5m" secondAttribute="trailing" id="Dck-b5-d3I"/>
                             <constraint firstAttribute="trailing" secondItem="uD4-S2-5bQ" secondAttribute="trailing" id="Gkq-1I-7NX"/>
                             <constraint firstAttribute="centerY" secondItem="uD4-S2-5bQ" secondAttribute="centerY" id="Lti-NE-qkf"/>
                             <constraint firstItem="uD4-S2-5bQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PEd-iL-YXP"/>
+                            <constraint firstItem="a9d-NP-r5m" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ewS-SC-JWh"/>
+                            <constraint firstItem="a9d-NP-r5m" firstAttribute="top" secondItem="uD4-S2-5bQ" secondAttribute="bottom" constant="23" id="nks-sx-LnS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonGroup" destination="uD4-S2-5bQ" id="aPJ-zu-T1t"/>
+                        <outlet property="coloredButtonGroup" destination="a9d-NP-r5m" id="VQ1-4q-n2R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

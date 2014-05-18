@@ -11,6 +11,7 @@
 @interface MWViewController ()
 
 @property (weak, nonatomic) IBOutlet MWButtonGroup *buttonGroup;
+@property (weak, nonatomic) IBOutlet MWButtonGroup *coloredButtonGroup;
 
 @end
 
@@ -23,7 +24,15 @@
     [self.buttonGroup addButtonsForTitles:@[@"Yes", @"No", @"Maybe"]];
     [self.buttonGroup selectButtonAtIndex:0];
 
-    //self.buttonGroup.multiSelectAllowed = YES;
+
+    [self.coloredButtonGroup addButtonsForTitles:@[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9"]];
+    self.coloredButtonGroup.multiSelectAllowed = YES;
+    [self.coloredButtonGroup selectButtonAtIndex:1];
+    [self.coloredButtonGroup selectButtonAtIndex:3];
+    [self.coloredButtonGroup selectButtonAtIndex:5];
+    [self.coloredButtonGroup selectButtonAtIndex:7];
+    self.coloredButtonGroup.textColor = [UIColor yellowColor];
+    self.coloredButtonGroup.buttonBackgroundColor = [UIColor colorWithRed:0 green:0.25 blue:0 alpha:1];
 
     self.buttonGroup.delegate = self;
 }

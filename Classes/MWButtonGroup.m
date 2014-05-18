@@ -49,14 +49,16 @@
 {
     _buttons = @[];
 
+    _textColor = [UIColor whiteColor];
+    _buttonBackgroundColor = [UIColor blackColor];
+    _selectedIndexSet = [NSMutableIndexSet new];
+
     self.clipsToBounds = YES;
 
     self.layer.cornerRadius = 8;
-    self.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.layer.borderColor = self.textColor.CGColor;
     self.layer.borderWidth = 1;
 
-    self.textColor = [UIColor whiteColor];
-    _selectedIndexSet = [NSMutableIndexSet new];
 }
 
 
@@ -76,7 +78,7 @@
         [self addSubview:button];
 
         UIView *lineView = [UIView new];
-        lineView.backgroundColor = [UIColor whiteColor];
+        lineView.backgroundColor = self.textColor;
         [lineViews addObject:lineView];
         [self addSubview:lineView];
     }
@@ -91,7 +93,6 @@
 - (void)_notifyDeselection:(NSIndexSet *)indexSet
 {
     if (self.delegate) {
-
         [indexSet enumerateIndexesUsingBlock:^(NSUInteger index, BOOL *stop) {
 
             if ([self.delegate respondsToSelector:@selector(buttonGroup:didDeselectButtonAtIndex:)]) {
@@ -184,18 +185,11 @@
 
     if (!self.multiSelectAllowed) {
         [_selectedIndexSet removeAllIndexes];
-
-        for (UIButton *button in _buttons) {
-            button.backgroundColor = [UIColor blackColor];
-            [button setTitleColor:self.textColor forState:UIControlStateNormal];
-        }
     }
 
     [_selectedIndexSet addIndex:index];
 
-    UIButton *button = _buttons[index];
-    button.backgroundColor = [UIColor whiteColor];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self updateButtons];
 }
 
 
@@ -207,8 +201,42 @@
     [self setNeedsLayout];
 
     UIButton *button = _buttons[index];
-    button.backgroundColor = [UIColor blackColor];
+    button.backgroundColor = self.buttonBackgroundColor;
     [button setTitleColor:self.textColor forState:UIControlStateNormal];
+}
+
+- (void)updateButtons
+{
+    for (NSUInteger i = 0; i < _buttons.count; i++) {
+        UIButton *button = _buttons[i];
+        if ([_selectedIndexSet containsIndex:i]) {
+            button.backgroundColor = self.textColor;
+            [button setTitleColor: self.buttonBackgroundColor forState:UIControlStateNormal];
+        }
+        else {
+            button.backgroundColor = self.buttonBackgroundColor;
+            [button setTitleColor:self.textColor forState:UIControlStateNormal];
+        }
+    }
+}
+
+- (void)setButtonBackgroundColor:(UIColor *)buttonBackgroundColor
+{
+    _buttonBackgroundColor = buttonBackgroundColor;
+    [self updateButtons];
+}
+
+- (void)setTextColor:(UIColor *)textColor
+{
+    _textColor = textColor;
+    self.layer.borderColor = self.textColor.CGColor;
+
+    for (UIView *view in _lineViews) {
+        view.backgroundColor = self.textColor;
+    }
+
+    [self setNeedsDisplay];
+    [self updateButtons];
 }
 
 @end
