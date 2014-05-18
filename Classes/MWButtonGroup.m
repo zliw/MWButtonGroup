@@ -62,7 +62,7 @@
 }
 
 
-- (void)addButtonsForTitles:(NSArray *)titles
+- (void)createButtonsForTitles:(NSArray *)titles
 {
     NSMutableArray *buttons = [NSMutableArray new];
     NSMutableArray *lineViews = [NSMutableArray new];
@@ -205,6 +205,7 @@
     [button setTitleColor:self.textColor forState:UIControlStateNormal];
 }
 
+
 - (void)updateButtons
 {
     for (NSUInteger i = 0; i < _buttons.count; i++) {
@@ -220,11 +221,13 @@
     }
 }
 
+
 - (void)setButtonBackgroundColor:(UIColor *)buttonBackgroundColor
 {
     _buttonBackgroundColor = buttonBackgroundColor;
     [self updateButtons];
 }
+
 
 - (void)setTextColor:(UIColor *)textColor
 {

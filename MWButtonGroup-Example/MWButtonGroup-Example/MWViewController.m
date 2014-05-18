@@ -21,11 +21,11 @@
 {
     [super viewDidLoad];
 
-    [self.buttonGroup addButtonsForTitles:@[@"Yes", @"No", @"Maybe"]];
+    [self.buttonGroup createButtonsForTitles:@[@"Yes", @"No", @"Maybe"]];
     [self.buttonGroup selectButtonAtIndex:0];
 
 
-    [self.coloredButtonGroup addButtonsForTitles:@[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9"]];
+    [self.coloredButtonGroup createButtonsForTitles:@[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9"]];
     self.coloredButtonGroup.multiSelectAllowed = YES;
     [self.coloredButtonGroup selectButtonAtIndex:1];
     [self.coloredButtonGroup selectButtonAtIndex:3];
@@ -37,10 +37,12 @@
     self.buttonGroup.delegate = self;
 }
 
+
 - (void)buttonGroup:(MWButtonGroup *)buttonGroup didSelectButtonAtIndex:(NSUInteger)index
 {
     NSLog(@"selected button at index %d", index);
 }
+
 
 - (void)buttonGroup:(MWButtonGroup *)buttonGroup didDeselectButtonAtIndex:(NSUInteger)index
 {
@@ -48,11 +50,13 @@
 
 }
 
+
 - (void)buttonGroup:(MWButtonGroup *)buttonGroup didSelectButton:(UIButton *)button
 {
     NSLog(@"selected button with title '%@'", button.titleLabel.text);
 
 }
+
 
 - (void)buttonGroup:(MWButtonGroup *)buttonGroup didDeselectButton:(UIButton *)button
 {

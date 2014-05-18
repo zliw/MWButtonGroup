@@ -22,8 +22,6 @@
 
 @end
 
-
-
 /** a UIView subclass containing an array of buttons
  */
 @interface MWButtonGroup : UIView
@@ -44,11 +42,13 @@
 @property (assign)                      BOOL    multiSelectAllowed;
 
 /** method for replacing the current buttons by giving a list of titles. buttons are text only in this case
+
  @param titles  an NSArray of strings
  */
-- (void)addButtonsForTitles:(NSArray *)titles;
+- (void)createButtonsForTitles:(NSArray *)titles;
 
 /** selects a button at the given. triggers redraw of the buttons
+
     @param index the index of the button to select
  */
 - (void)selectButtonAtIndex:(NSUInteger)index;
