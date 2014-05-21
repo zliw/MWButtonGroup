@@ -32,11 +32,16 @@
     [self.coloredButtonGroup selectButtonAtIndex:3];
     [self.coloredButtonGroup selectButtonAtIndex:5];
     [self.coloredButtonGroup selectButtonAtIndex:7];
+    self.coloredButtonGroup.borderColor = [UIColor orangeColor];
     self.coloredButtonGroup.textColor = [UIColor yellowColor];
     self.coloredButtonGroup.buttonBackgroundColor = [UIColor colorWithRed:0 green:0.25 blue:0 alpha:1];
+    self.coloredButtonGroup.borderWidth = 2.5;
+    self.coloredButtonGroup.layer.cornerRadius = 16;
 
     self.fontButtonGroup.font = [UIFont fontWithName:@"FontAwesome" size:32];
+    self.fontButtonGroup.borderWidth = 0.5;
     [self.fontButtonGroup createButtonsForTitles:@[@"\uf1b9", @"\uf072", @"\uf015"]];
+    [self.fontButtonGroup selectButtonAtIndex:0];
     [self.fontButtonGroup selectButtonAtIndex:0];
 }
 
@@ -57,7 +62,6 @@
 - (void)buttonGroup:(MWButtonGroup *)buttonGroup didSelectButton:(UIButton *)button
 {
     NSLog(@"selected button with title '%@'", button.titleLabel.text);
-
 }
 
 

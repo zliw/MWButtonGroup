@@ -27,22 +27,31 @@
 @interface MWButtonGroup : UIView
 
 /** a delegate which is notified via the protocols methods, if the user has selected a button */
-@property (weak, nonatomic)  NSObject<MWButtonGroupDelegate> *delegate;
+@property (weak, nonatomic)  NSObject<MWButtonGroupDelegate>    *delegate;
 
 /** readonly property for accessing the array of buttons */
-@property (strong, nonatomic,readonly)  NSArray *buttons;
+@property (strong, nonatomic,readonly)  NSArray                 *buttons;
 
-/** textColor of the button labels. existing buttons will be updated after change of this vale. */
-@property (strong, nonatomic)           UIColor *textColor;
+/** textColor of the button labels. existing buttons will be updated after change of this value. */
+@property (strong, nonatomic)           UIColor                 *textColor;
 
 /** background color of the button labels. existing buttons will be updated after change of this value. */
-@property (strong, nonatomic)           UIColor *buttonBackgroundColor;
+@property (strong, nonatomic)           UIColor                 *buttonBackgroundColor;
+
+/** border color of the button labels. if not set textColor will be used. existing buttons will be updated after change of this value */
+@property (strong, nonatomic)           UIColor                 *borderColor;
+
+/** border width of the group. the default is 1. triggers relayout of the view */
+@property (assign, nonatomic)           CGFloat                 borderWidth;
 
 /** background font used for the button labels. existing buttons will be updated after change of this value. */
-@property (strong, nonatomic)           UIFont *font;
+@property (strong, nonatomic)           UIFont                  *font;
 
 /** property for determining the selection pattern */
-@property (assign)                      BOOL    multiSelectAllowed;
+@property (assign)                      BOOL                    multiSelectAllowed;
+
+/* set of indexes of the selected buttons. readonly */
+@property (strong, nonatomic, readonly) NSMutableIndexSet       *selectedIndexSet;
 
 /** method for replacing the current buttons by giving a list of titles. buttons are text only in this case. Buttons
     are created with the current colors and font.

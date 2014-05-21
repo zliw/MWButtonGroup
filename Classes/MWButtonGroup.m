@@ -13,8 +13,6 @@
 // views used for separator lines, these are all one pixel wide
 @property (strong, nonatomic) NSArray *lineViews;
 
-// set of indexes for the selected buttons. for internal use only
-@property (strong, nonatomic) NSMutableIndexSet *selectedIndexSet;
 
 
 @end
@@ -50,6 +48,9 @@
     _buttons = @[];
 
     _font = nil;
+    _borderColor = nil;
+    _borderWidth = 1;
+
     _textColor = [UIColor whiteColor];
     _buttonBackgroundColor = [UIColor blackColor];
     _selectedIndexSet = [NSMutableIndexSet new];
@@ -58,8 +59,7 @@
 
     self.layer.cornerRadius = 8;
     self.layer.borderColor = self.textColor.CGColor;
-    self.layer.borderWidth = 1;
-
+    self.layer.borderWidth = _borderWidth;
 }
 
 
@@ -84,7 +84,7 @@
         [self addSubview:button];
 
         UIView *lineView = [UIView new];
-        lineView.backgroundColor = self.textColor;
+        lineView.backgroundColor = (_borderColor) ? _borderColor : _textColor;
         [lineViews addObject:lineView];
         [self addSubview:lineView];
     }
@@ -162,12 +162,12 @@
     [super layoutSubviews];
 
     CGRect buttonFrame = self.bounds;
-    buttonFrame.size.width = ((self.frame.size.width - 1) / self.buttons.count) - 1;
+    buttonFrame.size.width = ((self.frame.size.width - _borderWidth) / self.buttons.count) - _borderWidth;
 
     CGRect lineFrame = self.bounds;
-    lineFrame.size.width = 1;
+    lineFrame.size.width = _borderWidth;
 
-    CGFloat x = 1;
+    CGFloat x = _borderWidth;
 
     for (NSUInteger i = 0; i < _buttons.count; i++) {
         UIButton *button = _buttons[i];
@@ -176,11 +176,11 @@
 
         if (i < _buttons.count) {
             UIView *lineView = _lineViews[i];
-            lineFrame.origin.x = x - 1;
+            lineFrame.origin.x = x - _borderWidth;
             lineView.frame = lineFrame;
         }
 
-        x += buttonFrame.size.width + 1;
+        x += buttonFrame.size.width + _borderWidth;
     }
 }
 
@@ -228,6 +228,7 @@
     }
 }
 
+#pragma mark Setters
 
 - (void)setButtonBackgroundColor:(UIColor *)buttonBackgroundColor
 {
@@ -239,10 +240,12 @@
 - (void)setTextColor:(UIColor *)textColor
 {
     _textColor = textColor;
-    self.layer.borderColor = self.textColor.CGColor;
+    self.layer.borderColor = (_borderColor) ? _borderColor.CGColor : _textColor.CGColor;
 
-    for (UIView *view in _lineViews) {
-        view.backgroundColor = self.textColor;
+    if (!_borderColor) {
+        for (UIView *view in _lineViews) {
+            view.backgroundColor = self.textColor;
+        }
     }
 
     [self setNeedsDisplay];
@@ -258,5 +261,21 @@
     }
 }
 
+- (void)setBorderWidth:(CGFloat)borderWidth
+{
+    _borderWidth = borderWidth;
+    self.layer.borderWidth = _borderWidth;
+    [self setNeedsLayout];
+}
+
+- (void)setBorderColor:(UIColor *)borderColor
+{
+    _borderColor = borderColor;
+    self.layer.borderColor = _borderColor.CGColor;
+
+    for (UIView *view in _lineViews) {
+        view.backgroundColor = _borderColor;
+    }
+}
 
 @end
