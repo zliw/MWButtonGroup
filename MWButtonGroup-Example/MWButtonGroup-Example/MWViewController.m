@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet MWButtonGroup *buttonGroup;
 @property (weak, nonatomic) IBOutlet MWButtonGroup *coloredButtonGroup;
+@property (weak, nonatomic) IBOutlet MWButtonGroup *fontButtonGroup;
 
 @end
 
@@ -23,7 +24,7 @@
 
     [self.buttonGroup createButtonsForTitles:@[@"Yes", @"No", @"Maybe"]];
     [self.buttonGroup selectButtonAtIndex:0];
-
+    self.buttonGroup.delegate = self;
 
     [self.coloredButtonGroup createButtonsForTitles:@[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9"]];
     self.coloredButtonGroup.multiSelectAllowed = YES;
@@ -34,7 +35,9 @@
     self.coloredButtonGroup.textColor = [UIColor yellowColor];
     self.coloredButtonGroup.buttonBackgroundColor = [UIColor colorWithRed:0 green:0.25 blue:0 alpha:1];
 
-    self.buttonGroup.delegate = self;
+    self.fontButtonGroup.font = [UIFont fontWithName:@"FontAwesome" size:32];
+    [self.fontButtonGroup createButtonsForTitles:@[@"\uf1b9", @"\uf072", @"\uf015"]];
+    [self.fontButtonGroup selectButtonAtIndex:0];
 }
 
 

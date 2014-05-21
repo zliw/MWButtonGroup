@@ -16,6 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lH6-ia-ZJS" userLabel="Button Group with Font" customClass="MWButtonGroup">
+                                <rect key="frame" x="0.0" y="201" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Ffn-BH-fqn"/>
+                                    <constraint firstAttribute="height" constant="40" id="vZb-OC-VCh"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-S2-5bQ" customClass="MWButtonGroup">
                                 <rect key="frame" x="0.0" y="264" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,15 +44,19 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="a9d-NP-r5m" secondAttribute="trailing" id="Dck-b5-d3I"/>
                             <constraint firstAttribute="trailing" secondItem="uD4-S2-5bQ" secondAttribute="trailing" id="Gkq-1I-7NX"/>
+                            <constraint firstItem="lH6-ia-ZJS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Ju6-fK-hq1"/>
+                            <constraint firstItem="uD4-S2-5bQ" firstAttribute="top" secondItem="lH6-ia-ZJS" secondAttribute="bottom" constant="23" id="LCP-T7-d0J"/>
                             <constraint firstAttribute="centerY" secondItem="uD4-S2-5bQ" secondAttribute="centerY" id="Lti-NE-qkf"/>
                             <constraint firstItem="uD4-S2-5bQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PEd-iL-YXP"/>
                             <constraint firstItem="a9d-NP-r5m" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ewS-SC-JWh"/>
                             <constraint firstItem="a9d-NP-r5m" firstAttribute="top" secondItem="uD4-S2-5bQ" secondAttribute="bottom" constant="23" id="nks-sx-LnS"/>
+                            <constraint firstAttribute="trailing" secondItem="lH6-ia-ZJS" secondAttribute="trailing" id="rs2-1r-ijd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonGroup" destination="uD4-S2-5bQ" id="aPJ-zu-T1t"/>
                         <outlet property="coloredButtonGroup" destination="a9d-NP-r5m" id="VQ1-4q-n2R"/>
+                        <outlet property="fontButtonGroup" destination="lH6-ia-ZJS" id="vkX-ze-KLN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

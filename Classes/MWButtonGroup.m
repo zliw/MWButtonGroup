@@ -49,6 +49,7 @@
 {
     _buttons = @[];
 
+    _font = nil;
     _textColor = [UIColor whiteColor];
     _buttonBackgroundColor = [UIColor blackColor];
     _selectedIndexSet = [NSMutableIndexSet new];
@@ -71,6 +72,11 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [button setTitle:title forState:UIControlStateNormal];
         [button setTitleColor:self.textColor forState:UIControlStateNormal];
+
+        if (_font) {
+            button.titleLabel.font = _font;
+        }
+
         [button addTarget:self
                    action:@selector(buttonPressed:)
          forControlEvents:UIControlEventTouchUpInside];
@@ -210,6 +216,7 @@
 {
     for (NSUInteger i = 0; i < _buttons.count; i++) {
         UIButton *button = _buttons[i];
+
         if ([_selectedIndexSet containsIndex:i]) {
             button.backgroundColor = self.textColor;
             [button setTitleColor: self.buttonBackgroundColor forState:UIControlStateNormal];
@@ -241,5 +248,15 @@
     [self setNeedsDisplay];
     [self updateButtons];
 }
+
+- (void)setFont:(UIFont *)font
+{
+    _font = font;
+
+    for (UIButton *button in _buttons) {
+        button.titleLabel.font = font;
+    }
+}
+
 
 @end

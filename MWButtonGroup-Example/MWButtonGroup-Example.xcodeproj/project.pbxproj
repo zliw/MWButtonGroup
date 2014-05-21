@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5B6273192C8AE90021C9B6 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B6272192C8AE90021C9B6 /* fontawesome-webfont.ttf */; };
 		5BAD31B51927C6F900438DA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAD31B41927C6F900438DA2 /* Foundation.framework */; };
 		5BAD31B71927C6F900438DA2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAD31B61927C6F900438DA2 /* CoreGraphics.framework */; };
 		5BAD31B91927C6F900438DA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAD31B81927C6F900438DA2 /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B5B6272192C8AE90021C9B6 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		5BAD31B11927C6F900438DA2 /* MWButtonGroup-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MWButtonGroup-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAD31B41927C6F900438DA2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BAD31B61927C6F900438DA2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B5B6274192C8C0E0021C9B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5BAD31CC1927C6F900438DA2 /* Images.xcassets */,
+				5B5B6272192C8AE90021C9B6 /* fontawesome-webfont.ttf */,
+				5BAD31C61927C6F900438DA2 /* Main.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		5BAD31A81927C6F900438DA2 = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +132,7 @@
 				5BAD31C41927C6F900438DA2 /* MWAppDelegate.m */,
 				5BAD31C91927C6F900438DA2 /* MWViewController.h */,
 				5BAD31CA1927C6F900438DA2 /* MWViewController.m */,
-				5BAD31CC1927C6F900438DA2 /* Images.xcassets */,
+				5B5B6274192C8C0E0021C9B6 /* Resources */,
 				5BAD31BB1927C6F900438DA2 /* Supporting Files */,
 			);
 			path = "MWButtonGroup-Example";
@@ -129,7 +141,6 @@
 		5BAD31BB1927C6F900438DA2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5BAD31C61927C6F900438DA2 /* Main.storyboard */,
 				5BAD31BC1927C6F900438DA2 /* MWButtonGroup-Example-Info.plist */,
 				5BAD31BD1927C6F900438DA2 /* InfoPlist.strings */,
 				5BAD31C01927C6F900438DA2 /* main.m */,
@@ -243,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BAD31CD1927C6F900438DA2 /* Images.xcassets in Resources */,
+				5B5B6273192C8AE90021C9B6 /* fontawesome-webfont.ttf in Resources */,
 				5BAD31BF1927C6F900438DA2 /* InfoPlist.strings in Resources */,
 				5BAD31C81927C6F900438DA2 /* Main.storyboard in Resources */,
 			);

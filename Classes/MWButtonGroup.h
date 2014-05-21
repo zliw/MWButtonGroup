@@ -32,16 +32,20 @@
 /** readonly property for accessing the array of buttons */
 @property (strong, nonatomic,readonly)  NSArray *buttons;
 
-/** textColor of the button labels. */
+/** textColor of the button labels. existing buttons will be updated after change of this vale. */
 @property (strong, nonatomic)           UIColor *textColor;
 
-/** background color of the button labels. */
+/** background color of the button labels. existing buttons will be updated after change of this value. */
 @property (strong, nonatomic)           UIColor *buttonBackgroundColor;
+
+/** background font used for the button labels. existing buttons will be updated after change of this value. */
+@property (strong, nonatomic)           UIFont *font;
 
 /** property for determining the selection pattern */
 @property (assign)                      BOOL    multiSelectAllowed;
 
-/** method for replacing the current buttons by giving a list of titles. buttons are text only in this case
+/** method for replacing the current buttons by giving a list of titles. buttons are text only in this case. Buttons
+    are created with the current colors and font.
 
  @param titles  an NSArray of strings
  */
