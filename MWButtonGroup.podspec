@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.screenshots      = "https://raw.githubusercontent.com/zliw/MWButtonGroup/master/screenshot.png"
   s.license          = 'MIT'
   s.author           = { "Martin Wilz" => "github@wilz.de" }
-  s.source           = { :git => "https://github.com/zliw/MWButtonGroup.git", :tag => "0.0.1" }
+  s.source           = { :git => "https://github.com/zliw/MWButtonGroup.git", :tag => "0.1.0" }
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
