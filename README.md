@@ -56,6 +56,12 @@ properties.
     group.buttonBackgroundColor = [UIColor colorWithRed:0 green:0.25 blue:0 alpha:1];
 ```
 
+The font can be set for all buttons contained in the button group:
+
+```objective-c
+    group.font = [UIFont fontWithName:@"HelveticaNeue" size:16];
+```
+
 ## License
 
 The component is available under a MIT license. For more details see the license file.
