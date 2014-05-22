@@ -3,8 +3,9 @@ MWButtonGroup
 
 A UIView containing a group of buttons horizontally positioned in a rounded rectangle. 
 
-* Support for single-select and multi-select is available.
-* Colouring of the button is possible
+* Support for single-select mode and multi-select mode is available.
+* Colouring and limited styling of the buttons is possible
+* Notifications are handled by a delegate pattern
 
 ![screenshot](screenshot.png)
 
@@ -24,12 +25,11 @@ pod 'MWButtonGroup' , :git=> 'https://github.com/zliw/MWButtonGroup.git'
 
 ## Usage
 
-General Usage can be seen in the ```MWButtonGroup-Example```-Folder.
-
+An example of the usage can be seen in the ```MWButtonGroup-Example```-Folder.
 
 ### The Basics
 
-The View can be initialized like any other UIView subclass (or be created in interface builder). 
+The view can be initialized like any other UIView subclass (or can be created in interface builder). Unfortunately styling of the view has to be implented in code.
 
 ```objective-c
   MWButtonGroup *group = [[MWButtonGroup alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
@@ -47,7 +47,6 @@ Multiselection is turned off by default. You can enable it by setting a property
     group.coloredButtonGroup.multiSelectAllowed = YES;
 ```
 
-
 The default is to use black and white as colour scheme. You can set the following colour
 properties.
 
@@ -64,5 +63,5 @@ The font can be set for all buttons contained in the button group:
 
 ## License
 
-The component is available under a MIT license. For more details see the license file.
+The component is available under a MIT license. For more details see the [license](https://github.com/zliw/MWButtonGroup/blob/master/LICENSE) file.
 
