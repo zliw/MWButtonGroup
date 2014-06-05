@@ -20,7 +20,7 @@ A UIView containing a group of buttons horizontally positioned in a rounded rect
 Add the following line to your Podfile:
 
 ```ruby
-pod 'MWButtonGroup' , :git=> 'https://github.com/zliw/MWButtonGroup.git'
+pod 'MWButtonGroup', '~> 0.2'
 ```
 
 ## Usage
